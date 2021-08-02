@@ -9,7 +9,7 @@ import { UserService } from 'src/app/User/Shared/user.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
 
@@ -98,7 +98,7 @@ export class NavbarComponent implements OnInit {
         this.toastr.success("welcome")
 
         window.location.reload();
-        
+
         localStorage.setItem('token', res.token);
       },
       err => {

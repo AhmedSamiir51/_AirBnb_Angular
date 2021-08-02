@@ -144,7 +144,7 @@ a{
 .navbar-nav .nav-item a {
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: rgb(255, 56, 92);
   transition: all 0.3s ease-out 0s;
   padding: 10px 0;
   position: relative;
@@ -191,13 +191,13 @@ a{
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .navbar-nav .nav-item a.active, .navbar-nav .nav-item a:hover {
-    color: #E84E4E;
+    color: rgb(255, 56, 92);
   }
 }
 
 @media (max-width: 767px) {
   .navbar-nav .nav-item a.active, .navbar-nav .nav-item a:hover {
-    color: #E84E4E;
+    color: rgb(255, 56, 92);
   }
 }
 
@@ -269,7 +269,7 @@ a{
 
 .navbar-nav .nav-item .sub-menu li a.active, .navbar-nav .nav-item .sub-menu li a:hover {
   padding-left: 25px;
-  color: #E84E4E;
+  color: rgb(255, 56, 92);
 }
 
 .navbar-nav .sub-nav-toggler {
@@ -325,11 +325,11 @@ a{
 }
 
 .sticky .navbar-nav .nav-item a::before {
-  background-color: #E84E4E;
+  background-color: rgb(255, 56, 92);
 }
 
 .sticky .navbar-nav .nav-item a.active, .sticky .navbar-nav .nav-item a:hover {
-  color: #E84E4E;
+  color: rgb(255, 56, 92);
 }
 
 /*===== hero =====*/
@@ -337,7 +337,6 @@ a{
   height: 750px;
   position: relative;
   overflow: hidden;
-  z-index: 1;
 }
 
 @media only screen and (min-width: 1400px) {
@@ -410,7 +409,7 @@ a{
 
 .hero_content .hero_title span {
   display: contents;
-  color: #E84E4E;
+  color: rgb(255, 56, 92);
 }
 
 .hero_content p {
@@ -428,5 +427,8 @@ a{
 .hero_content .main-btn {
   margin-top: 45px;
 
+}
+:host ::ng-deep .p-password input {
+  width: 29rem;
 }
 
