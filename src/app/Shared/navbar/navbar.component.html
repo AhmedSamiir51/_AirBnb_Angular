@@ -20,23 +20,14 @@
                 <a class="page-scroll active text-danger" routerLink="/Becomehost">Become a host</a>
               </li>
               <li class="nav-item">
-                <a class="page-scroll text-danger" routerLink="/Booking">Booking</a>
+                <a class="page-scroll text-danger  " *ngIf="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Register</a>
               </li>
               <li class="nav-item">
-                <a class="page-scroll text-danger" routerLink="/House">Houses</a>
-              </li>
-              <li class="nav-item">
-                <a class="page-scroll text-danger btn " *ngIf="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">register</a>
-              </li>
-              <li class="nav-item">
-                <a class="page-scroll text-danger btn " *ngIf="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</a>
+                <a class="page-scroll text-danger  " *ngIf="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</a>
               </li>
 
               <li class="nav-item">
-                <a class="page-scroll text-danger btn " *ngIf="LogOut"  (click)="logout()">LogOut</a>
-              </li>
-              <li class="nav-item">
-                <a class="page-scroll text-danger" routerLink="/home">Contact</a>
+                <a class="page-scroll text-danger btn " *ngIf="LogOut"  (click)="logout()">Logout</a>
               </li>
             </ul>
           </div> <!-- navbar collapse -->
@@ -80,6 +71,7 @@
             <label  *ngIf="f.PersonEmailName.touched && f.PersonEmailName.errors?.required  " class="text-danger"  > Invalid email address. </label>
 
           </div>
+          <p-password  formControlName="PersonPassword" placeholder="Password"   required minlength="4" > </p-password>
 
           <div class="form-group">
             <label>Phone</label>
@@ -87,18 +79,14 @@
             <label  *ngIf="f.PersonPhone.touched && f.PersonPhone.errors?.required  " class="text-danger"  > Phone Is Required. </label>
 
           </div>
-          <input type="file" formControlName="ProfilePicture" #file (change)="onFileChange(file.files)" class="file" accept="image/*" > <br>
+          <input type="file" formControlName="ProfilePicture" #file (change)="onFileChange(file.files)" class="file form-control" accept="image/*" > <br>
 
-          <p-password formControlName="PersonPassword" placeholder="Password"    required minlength="4" > </p-password>
           <div class="form-row">
-            <div class="form-group col-md-8 offset-md-2">
+            <div class="form-group col-md-8 offset-md-2 my-4">
               <button type="submit" class="btn btn-dark btn-block w-50 mx-auto"
                 [disabled]="!formModel.valid" >Sign Up</button>
               <div class="float-end mx-n5">
-
-
               </div>
-
             </div>
           </div>
         </form>
