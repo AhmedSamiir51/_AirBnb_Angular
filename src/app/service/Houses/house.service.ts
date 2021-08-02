@@ -30,7 +30,7 @@ export class HouseService {
 
 
   getHousesByCity(city:string){
-    return this.http.get<House>(this.baseurl+"/Houses/city/"+city)
+    return this.http.get<any>(this.baseurl+"/Houses/city/"+city)
   }
 
   getHousesById(id:number){
