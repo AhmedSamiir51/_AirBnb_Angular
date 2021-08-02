@@ -37,6 +37,26 @@ import {PasswordModule} from 'primeng/password';
 import { PersonFeedbackComponent } from './person-feedback/person-feedback.component';
 import {CarouselModule as Carousel} from 'primeng/carousel';
 import { ErrorComponent } from './Error/error/error.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { PricePipe } from './pipes/price.pipe';
+
+
+
+
+
+import {TableModule} from 'primeng/table';
+import {ToastModule} from 'primeng/toast';
+import {SliderModule} from 'primeng/slider';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {ContextMenuModule} from 'primeng/contextmenu';
+import {DialogModule} from 'primeng/dialog';
+import {DropdownModule} from 'primeng/dropdown';
+import {ProgressBarModule} from 'primeng/progressbar';
+import {InputTextModule} from 'primeng/inputtext';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -57,8 +77,10 @@ import { ErrorComponent } from './Error/error/error.component';
     DetailsComponent,
     PersonFeedbackComponent,
     ErrorComponent,
+    FilterPipe,
+    PricePipe,
   ],
-  imports: [AccordionModule,
+  imports: [AccordionModule,InputTextModule,ProgressBarModule,DropdownModule,DialogModule,ContextMenuModule,MultiSelectModule,SliderModule,ToastModule,TableModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
@@ -78,7 +100,7 @@ import { ErrorComponent } from './Error/error/error.component';
     CompareValidatorModule,Carousel
 
   ],
-  providers: [MessageService],
+  providers: [MessageService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
