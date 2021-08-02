@@ -53,8 +53,7 @@ import {DialogModule} from 'primeng/dialog';
 import {DropdownModule} from 'primeng/dropdown';
 import {ProgressBarModule} from 'primeng/progressbar';
 import {InputTextModule} from 'primeng/inputtext';
-
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -81,7 +80,7 @@ import {InputTextModule} from 'primeng/inputtext';
     PricePipe,
   ],
   imports: [AccordionModule,InputTextModule,ProgressBarModule,DropdownModule,DialogModule,ContextMenuModule,MultiSelectModule,SliderModule,ToastModule,TableModule,
-    BrowserModule,
+    BrowserModule,NgxPaginationModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
