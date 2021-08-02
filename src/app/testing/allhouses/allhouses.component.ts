@@ -1,7 +1,7 @@
 import { HousePhotoService } from './../../service/HousesPhoto/house-photo.service';
 import { UserService } from 'src/app/User/Shared/user.service';
 import { House } from './../../service/Houses/house';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HouseService } from 'src/app/service/Houses/house.service';
 
@@ -10,18 +10,19 @@ declare var google:any
   selector: 'app-allhouses',
   templateUrl: './allhouses.component.html',
   styleUrls: ['./allhouses.component.css']
+
 })
 export class AllhousesComponent implements OnInit {
 
   constructor(public service :HouseService , private router: Router,public services :UserService,public ar:ActivatedRoute ,public serviceimg:HousePhotoService) { }
 
   options: any;
-
+  filterByCity:string=''
   overlays: any[]=[];
   items:any=[]
   itemshouse:any=[]
   id=0
-
+  filterByPrice:any=1000
   ngOnInit(): void {
 
       this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{this.items=e; },er=>console.log(er))

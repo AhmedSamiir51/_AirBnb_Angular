@@ -1,15 +1,4 @@
-<!-- <div class=" container my-auto mt-5" style="margin-top: 100px !important;">
-  <h1>{{ar.snapshot.params["City"]}}</h1>
-  <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'320px'}"></p-gmap>
-  <div *ngFor="let i of this.items">
-    <a routerLink="/House/HousesBooking/{{i.houseId}}">
-      <h2>{{i.title}}</h2>
-      <h2>{{i.housePrice}}</h2>
-      <h1>{{i.housePrice}}</h1>
-    </a>
-    <hr>
-  </div>
-</div> -->
+
 <div class="container-fluid mycontainer mt-5 " style="margin-top: 120px !important;">
   <div class="row ">
     <div class="col-sm-12 col-xl-5 info   ">
@@ -17,33 +6,14 @@
         <h2 class="h-text">Stays in {{ar.snapshot.params["City"]}} </h2>
         <div class="anchors d-flex align-items-start  ">
           <div class="innerdiv">
-            <button class="att att1">
-              Cancellation flexibility
-            </button>
-            <button class=" att att2">
-              Type of place
-            </button>
-            <button class=" att att3">
-              Price
-            </button>
-            <button class=" att att4">
-              Instant Book
-            </button>
-            <button class=" att att5">
-              More filters
-            </button>
-            <div class="dropdown">
-              <button class="att att6 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Filters
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <a class="dropdown-item" href="#">Type of place</a>
-                <a class="dropdown-item" href="#">Price</a>
-                <a class="dropdown-item" href="#"> Instant Book</a>
-                <a class="dropdown-item" href="#">More filter</a>
-                <a class="dropdown-item" href="#">Cancellation flexibility</a>
-              </ul>
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" class="form-control" [(ngModel)]="filterByCity" placeholder="Filter By Street">
+              </div>
+              <div class="col-md-6">
+                <h5>Basic: {{filterByPrice}}</h5>
+                <p-slider [min]="0" [max]="600" [(ngModel)]="filterByPrice"></p-slider>
+              </div>
             </div>
           </div>
         </div>
@@ -51,7 +21,8 @@
       </div>
 
       <!-- Loop to Date Of House -->
-      <div *ngFor="let i of this.items">
+
+      <div *ngFor="let i of this.items |price: filterByPrice |filter: filterByCity">
         <div class="card">
           <div class="myline">
           </div>
@@ -110,11 +81,8 @@
       </div>
     </div>
     <div class="col map myform  " style="height: 100vh !important;">
-      <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'100vh'}"></p-gmap>
+      <!-- <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'100vh'}"></p-gmap> -->
 
-      <!-- <div *ngFor="let item of itemshouse" >
-        <h2>{{item.houseId}}</h2>
-      </div> -->
 
 
     </div>
