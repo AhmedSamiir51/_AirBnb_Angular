@@ -1,0 +1,190 @@
+
+<div class="container" id="c11">
+  <h1>{{Houses.title}}</h1>
+  <div class="star-review mb-3 d-flex">
+    <div class="inner-star d-flex">
+        <i class="fas fa-star"></i>
+        <p>4.33 &nbsp; </p>
+        <p class="star-p"> (3 reviews)</p>
+        <p> &nbsp; . &nbsp; </p>
+        <p class="star-p">{{Houses.houseStreet}}, {{Houses.houseCity}}, {{Houses.houseCountry}}</p>
+    </div>
+</div>
+  <div class="row">
+      <div class="col-6">
+          <img src="http://localhost:42138/{{itemshouse[0]?.housePhotos}}" class="img-fluid rounded float-left mr-1 ">
+      </div>
+      <div class="col-6">
+
+
+              <div class="row">
+                  <div class="col-6 ">
+                      <img src="http://localhost:42138/{{itemshouse[1]?.housePhotos}}"
+                          class=" mb-2 rounded float-left">
+                      <img  src="http://localhost:42138/{{itemshouse[2]?.housePhotos}}"
+                          class=" rounded float-left ">
+                  </div>
+
+
+                  <div class="col-6 ">
+                      <img src="http://localhost:42138/{{itemshouse[3]?.housePhotos}}"
+                          class=" mb-2 rounded float-left">
+                      <img src="http://localhost:42138/{{itemshouse[4]?.housePhotos}}"
+                          class=" rounded float-left  ">
+                  </div>
+
+              </div>
+
+      </div>
+  </div>
+  <div class="row ">
+      <div class="col-8 ">
+          <div class=" row mt-5 d-flex justify-content-between  ">
+              <div class="col ">
+                  <h1>
+                      Entire chalet hosted by {{ids.personFirstName}}
+                  </h1>
+                  <h3>
+                      7 guests · 2 bedrooms · 3 beds · 2 baths
+                  </h3>
+              </div>
+              <div class="col ">
+                  <img src="../../../assets/images/38b2fa73-2b79-46a7-8811-c3b2170172e8.jpg" class="rounded" length="60"
+                      width="60">
+              </div>
+              <hr>
+          </div>
+          <div>
+
+              <div>
+                  <h5>
+                    {{ids.personFirstName}} is a Superhost
+                  </h5>
+                  <p>
+                      Superhosts are experienced, highly rated hosts who are committed to providing great stays
+                      for guests.
+                  </p>
+              </div>
+
+              <div>
+                  <h5>
+
+                      Great check-in experience
+                  </h5>
+                  <p>
+                      100% of recent guests gave the check-in process a 5-star rating.
+                  </p>
+              </div>
+
+              <div>
+                  <h5>
+                      Pool
+                  </h5>
+                  <p>
+                      Guests often search for this popular amenity
+                  </p>
+              </div>
+              <hr>
+
+              <div>
+                  <h3>
+                      All about {{ids.personFirstName}}’s place
+                  </h3>
+
+                  <p>
+                      A lovely chalet situated within Golden Beach 2 in Ras Sedr. The compound has communal
+                      swimming pools, entertainments and aqua park for kids; all on a walking distance from
+                      stunning beachfront. The latter is one of the top ones in the area. Has private security,
+                      all essential services are available within, full of gardens and common social spaces, yet
+                      most importantly has a lovely beach. The chalet is an ideal getaway for mind-clearing,
+                      family gathering, or simply to enjoy the sun and the beach.
+                  </p>
+              </div>
+
+              <hr>
+
+              <div class="row">
+                  <h3>
+                      Places for sleeping
+                  </h3>
+                  <div class="card border-secondary mb-3 col-6"
+                      style="max-width: 14rem; max-height: 10rem; border-radius: 15px;">
+
+                      <div class="card-body ">
+                          <h5 class="card-title"> <i class="fas fa-bed"></i></h5>
+                          <p class="card-text"> Bedroom 1 <br> 1 double bed</p>
+                      </div>
+                  </div>
+                  <div class="card border-secondary mb-3 mx-3 col-6"
+                      style="max-width: 14rem; max-height: 10rem; border-radius: 15px;">
+
+                      <div class="card-body ">
+                          <h5 class="card-title"> <i class="fas fa-bed"></i> <i class="fas fa-bed"></i></h5>
+                          <p class="card-text"> Bedroom 2 <br> 2 single bed</p>
+                      </div>
+                  </div>
+              </div>
+
+              <hr>
+
+              <div class="row">
+                  <h3>
+                      What this place offers
+                  </h3>
+                  <div class="col-6">
+                      <i class="fas fa-wifi p-1 mt-1 mx-3"></i> WIFI
+                      <br>
+
+                      <i class="fas fa-swimming-pool p-1 mt-2 mx-3"></i> Swimming Pool
+                      <br>
+
+                      <i class="fas fa-tv  p-1 mt-2 mx-3"></i> TV
+                  </div>
+                  <div class="col-6">
+
+                      <i class="fas fa-utensils p-1 mt-2 mx-3"></i> Kitchen
+                      <br>
+
+                      <i class="fas fa-paw p-1 mt-2 mx-3"></i> Pets Allowed
+                      <br>
+                      <i class="fas fa-parking p-1 mt-2 mx-3"></i> Parking
+                  </div>
+                  <button type="button" class="btn btn-light mt-4"
+                      style="border-color: black; border-style: solid; width: 270px; ">Show All 44
+                      Amenities</button>
+              </div>
+
+              <hr>
+
+
+
+          </div>
+      </div>
+      <div class="col-4 mydiv">
+        <div class="myform d-flex flex-column">
+            <div class="price d-flex justify-content-between">
+                <p> {{Houses?.housePrice}} / night</p>
+                <p>4.33(3 reviews)</p>
+            </div>
+            <div class=" check-container ">
+                <div class="row-cols-2 row">
+                <div class="col mycol mycol-l">
+                    <p class="check">CHECK-IN</p>
+                    <p class="check-l">  <input  [(ngModel)]="st" type="date"> </p>
+                    </div>
+                <div class="col mycol mycol-r">
+                    <p class="check">CHECKOUT</p>
+                    <p class="check-l">  <input  [(ngModel)]="ed" class="check-l" type="date" ></p>
+                    </div>
+                <div class="col-12 text-center">
+                    <p class="guests">GUESTS</p>
+                </div>
+                </div>
+            </div>
+            <button type="submit" (click)=" Save()"  class="btn mt-3 mybtn">Check availability</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
