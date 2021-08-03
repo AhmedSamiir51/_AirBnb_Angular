@@ -42,6 +42,7 @@ import { PricePipe } from './pipes/price.pipe';
 
 
 
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 import {TableModule} from 'primeng/table';
@@ -53,7 +54,7 @@ import {DialogModule} from 'primeng/dialog';
 import {DropdownModule} from 'primeng/dropdown';
 import {ProgressBarModule} from 'primeng/progressbar';
 import {InputTextModule} from 'primeng/inputtext';
-import { NgxPaginationModule } from 'ngx-pagination';
+
 
 
 
@@ -79,12 +80,15 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FilterPipe,
     PricePipe,
   ],
-  imports: [AccordionModule,InputTextModule,ProgressBarModule,DropdownModule,DialogModule,ContextMenuModule,MultiSelectModule,SliderModule,ToastModule,TableModule,
-    BrowserModule,NgxPaginationModule,
+  imports: [
+    NgxPaginationModule,
+    AccordionModule,InputTextModule,ProgressBarModule,DropdownModule,DialogModule,ContextMenuModule,MultiSelectModule,SliderModule,ToastModule,TableModule,
+    BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
     FormsModule,
+   
     ReactiveFormsModule,
     ToastrModule.forRoot({
       progressBar: true
@@ -100,6 +104,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
   ],
   providers: [MessageService ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+ 
 })
-export class AppModule { }
+export class AppModule {}
