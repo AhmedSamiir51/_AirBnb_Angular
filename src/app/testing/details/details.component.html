@@ -11,14 +11,14 @@
     </div>
 </div>
 
-  <div class="row  mx-auto">
-    <p-galleria class="col" [(value)]="itemshouse" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '700px'}" [numVisible]="2">
+  <div class="row  mx-auto " style="margin-bottom: 50px;">
+    <p-galleria class="col" [(value)]="itemshouse" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '1000px'}" [numVisible]="4">
       <ng-template pTemplate="item" let-item>
-          <img src="http://localhost:42138/{{item?.housePhotos}}"  style="width: 500px; height: 500px; " />
+          <img src="http://localhost:42138/{{item?.housePhotos}}"  style="width: 1000px; height: 500px; " />
       </ng-template>
       <ng-template pTemplate="thumbnail" let-item>
-          <div class="p-grid p-nogutter p-justify-center">
-              <img src="http://localhost:42138/{{item?.housePhotos}}" style="width: auto; height: 100px; margin-left: 10px; "   />
+          <div class="p-grid p-nogutter p-justify-center mx-4">
+              <img src="http://localhost:42138/{{item?.housePhotos}}"  style="width: auto; height: 100px; "   />
           </div>
       </ng-template>
     </p-galleria>
@@ -148,7 +148,7 @@
                 <p> {{Houses?.housePrice}} / night</p>
                 <p>4.33(3 reviews)</p>
             </div>
-            <div class=" check-container ">
+            <div class=" check-container  ">
                 <div class="row-cols-2 row">
                 <div class="col mycol mycol-l">
                     <p class="check">CHECK-IN</p>
@@ -156,10 +156,12 @@
                     </div>
                 <div class="col mycol mycol-r">
                     <p class="check">CHECKOUT</p>
-                    <p class="check-l">  <input class="form-control" [(ngModel)]="ed" class="check-l" type="date" ></p>
+                    <p class="check-l">  <input class="form-control" [(ngModel)]="ed"  type="date" ></p>
                     </div>
-                <div class="col-12 text-center">
-                    <p class="guests">GUESTS</p>
+                <div class="col-12 text-center ">
+                    <p class="guests my-auto"> <i class="fas fa-dollar-sign  " style="font-size: 17px; color: black !important;"></i>
+                      CASH ON CHECK IN
+                     </p>
                 </div>
                 </div>
             </div>

@@ -82,11 +82,14 @@
 
         </div>
       </div>
-      <pagination-controls
+      <div class="d-flex justify-content-center">
+        <pagination-controls
+
           previousLabel="Prev"
           nextLabel="Next"
-          (pageChange)="page($event)">
+          (pageChange)="onTableDataChange($event)">
         </pagination-controls>
+      </div>
     </div>
     <div class="col map myform  " style="height: 100vh !important;">
       <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'100vh'}"></p-gmap>

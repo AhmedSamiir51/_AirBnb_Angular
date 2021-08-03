@@ -29,12 +29,7 @@ export class AllhousesComponent implements OnInit {
 
 
   ngOnInit(): void {
-
-
-
-      this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{this.items=e; },er=>console.log(er))
-      this.serviceimg.GetAllHousesPhoto().subscribe(e=>{this.itemshouse=e;console.log(e)})
-
+    this.fetchPosts()
     this.options = {
         center: {lat: 36.890257, lng: 30.707417},
         zoom: 12
@@ -55,6 +50,17 @@ export class AllhousesComponent implements OnInit {
 
 
 
+  fetchPosts(): void {
+
+    this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{this.items=e; this.TotalLength=e.length;},er=>console.log(er))
+    this.serviceimg.GetAllHousesPhoto().subscribe(e=>{this.itemshouse=e;console.log(e)})
+
+  }
+
+  onTableDataChange(event:any){
+    this.page = event;
+    this.fetchPosts();
+  }
 
 
 
