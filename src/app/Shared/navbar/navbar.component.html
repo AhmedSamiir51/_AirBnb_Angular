@@ -28,7 +28,7 @@
                 <a style="font-weight: bold;
                 font-family:Arial, Helvetica, sans-serif;" class="page-scroll text-dark" routerLink="/Becomehost">Become a host</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item mx-4">
                 <a style="font-weight: bold;
                 font-family:Arial, Helvetica, sans-serif;" class="page-scroll text-dark" *ngIf="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Register</a>
               </li>
@@ -39,7 +39,9 @@
               </li>
 
               <li class="nav-item">
-                <a class="page-scroll text-danger btn " *ngIf="LogOut"  (click)="logout()">Logout</a>
+                <a style="font-weight: bold;
+                font-family:Arial, Helvetica, sans-serif;
+                margin-left:10px !important;" class="page-scroll" *ngIf="LogOut"  (click)="logout()">Logout</a>
               </li>
             </ul>
           </div> <!-- navbar collapse -->
@@ -81,9 +83,8 @@
             <input class="form-control" formControlName="PersonEmailName">
 
             <label  *ngIf="f.PersonEmailName.touched && f.PersonEmailName.errors?.required  " class="text-danger"  > Invalid email address. </label>
-
           </div>
-          <p-password  formControlName="PersonPassword" placeholder="Password"   required minlength="4" > </p-password>
+          <p-password  formControlName="PersonPassword" placeholder="Password"  required minlength="4" > </p-password>
 
           <div class="form-group">
             <label>Phone</label>

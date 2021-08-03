@@ -22,7 +22,10 @@
 
       <!-- Loop to Date Of House -->
 
-      <div *ngFor="let i of this.items  |price: filterByPrice |filter: filterByCity">
+      <div *ngFor="let i of this.items  |price: filterByPrice |filter: filterByCity | paginate: {
+        itemsPerPage: 5,
+         currentPage: page,
+          totalItems: TotalLength }">
         <div class="card">
           <div class="myline">
           </div>
@@ -79,6 +82,11 @@
 
         </div>
       </div>
+      <pagination-controls
+          previousLabel="Prev"
+          nextLabel="Next"
+          (pageChange)="page($event)">
+        </pagination-controls>
     </div>
     <div class="col map myform  " style="height: 100vh !important;">
       <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'100vh'}"></p-gmap>

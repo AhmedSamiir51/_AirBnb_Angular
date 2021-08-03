@@ -18,6 +18,8 @@ export class AllhousesComponent implements OnInit {
 
   options: any;
   filterByCity:string=''
+  TotalLength:any;
+  page:any = 1;
   overlays: any[]=[];
   items:any=[]
   itemshouse:any=[]

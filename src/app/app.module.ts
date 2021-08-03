@@ -14,6 +14,7 @@ import { CompareValidatorModule } from 'angular-compare-validator';
 
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Auth/login/login.component';
@@ -21,6 +22,7 @@ import { RegisterComponent } from './Auth/register/register.component';
 import { NavbarComponent } from './Shared/navbar/navbar.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { HomeComponent } from './page/home/home.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { ExplorenerbyComponent } from './page/explorenerby/explorenerby.component';
 import { LiveAnyWhereComponent } from './page/live-any-where/live-any-where.component';
 import { DiscoverThingsComponent } from './page/discover-things/discover-things.component';
@@ -43,7 +45,6 @@ import { PricePipe } from './pipes/price.pipe';
 
 
 
-
 import {TableModule} from 'primeng/table';
 import {ToastModule} from 'primeng/toast';
 import {SliderModule} from 'primeng/slider';
@@ -53,7 +54,6 @@ import {DialogModule} from 'primeng/dialog';
 import {DropdownModule} from 'primeng/dropdown';
 import {ProgressBarModule} from 'primeng/progressbar';
 import {InputTextModule} from 'primeng/inputtext';
-import { NgxPaginationModule } from 'ngx-pagination';
 import {GalleriaModule} from 'primeng/galleria';
 
 
@@ -80,8 +80,9 @@ import {GalleriaModule} from 'primeng/galleria';
     FilterPipe,
     PricePipe,
   ],
-  imports: [AccordionModule,InputTextModule,ProgressBarModule,DropdownModule,DialogModule,ContextMenuModule,MultiSelectModule,SliderModule,ToastModule,TableModule,
-    BrowserModule,NgxPaginationModule,
+  imports: [
+    NgxPaginationModule,AccordionModule,InputTextModule,ProgressBarModule,DropdownModule,DialogModule,ContextMenuModule,MultiSelectModule,SliderModule,ToastModule,TableModule,
+    BrowserModule,
     AppRoutingModule,GalleriaModule,
     NgbModule,
     HttpClientModule,
