@@ -22,8 +22,13 @@ export class AllhousesComponent implements OnInit {
   items:any=[]
   itemshouse:any=[]
   id=0
-  filterByPrice:any=1000
+  filterByPrice:any=300
+
+
+
   ngOnInit(): void {
+
+
 
       this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{this.items=e; },er=>console.log(er))
       this.serviceimg.GetAllHousesPhoto().subscribe(e=>{this.itemshouse=e;console.log(e)})

@@ -11,8 +11,8 @@
                 <input type="text" class="form-control" [(ngModel)]="filterByCity" placeholder="Filter By Street">
               </div>
               <div class="col-md-6">
-                <h5>Basic: {{filterByPrice}}</h5>
-                <p-slider [min]="0" [max]="600" [(ngModel)]="filterByPrice"></p-slider>
+                <h5> Price: {{filterByPrice}}</h5>
+                <p-slider [min]="0" [max]="200" [(ngModel)]="filterByPrice"></p-slider>
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@
       </div>
     </div>
     <div class="col map myform  " style="height: 100vh !important;">
-      <!-- <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'100vh'}"></p-gmap> -->
+      <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'100vh'}"></p-gmap>
 
 
 
