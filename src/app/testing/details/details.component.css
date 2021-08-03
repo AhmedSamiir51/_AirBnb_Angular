@@ -55,8 +55,7 @@
     margin: 0;
   }
   .guests {
-    padding-left: 8px;
-    text-align: left;
+
     font-weight: bold;
     border-top: 1px solid black;
   }
