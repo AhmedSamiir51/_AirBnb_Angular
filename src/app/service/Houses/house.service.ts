@@ -33,10 +33,14 @@ export class HouseService {
     return this.http.get<any>(this.baseurl+"/Houses/city/"+city)
   }
 
-  getHousesById(id:number){
+  getHousesById(id:any){
     return this.http.get<any>(this.baseurl+`/Houses/${id}`)
   }
 
+
+  getHousesByIdUser(id:any){
+    return this.http.get<any>(this.baseurl+`/Houses/person/${id}`)
+  }
 
   editHouse(edit:House){
 
