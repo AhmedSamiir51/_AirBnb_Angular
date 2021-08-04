@@ -38,6 +38,10 @@ export class HouseService {
   }
 
 
+  getHousesByIdUser(id:any){
+    return this.http.get<any>(this.baseurl+`/Houses/person/${id}`)
+  }
+
   editHouse(edit:House){
 
     return this.http.put(this.baseurl+"/Houses/"+edit.HouseId,edit)
