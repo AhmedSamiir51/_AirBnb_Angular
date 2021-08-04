@@ -24,6 +24,7 @@ const routes: Routes = [
   {path:"Booking",component:BookingComponent},
   {path:"House/AllHouses/:City",component:AllhousesComponent},
   {path:"House/HousesBooking/:id",component:DetailsComponent},
+  {path:"House/AllHouses",component:AllhousesComponent},
   {path:"Feedback",component:PersonFeedbackComponent},
   {path:"Profile/:id",component:ProfileComponent},
 
