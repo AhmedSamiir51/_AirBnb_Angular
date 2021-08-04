@@ -17,8 +17,6 @@ import { CompareValidatorModule } from 'angular-compare-validator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './Auth/login/login.component';
-import { RegisterComponent } from './Auth/register/register.component';
 import { NavbarComponent } from './Shared/navbar/navbar.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { HomeComponent } from './page/home/home.component';
@@ -31,18 +29,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { HostingComponent } from './hosting/hosting.component';
 import { HousesComponent } from './testing/houses/houses/houses.component';
-import { BookingComponent } from './testing/booking/booking/booking.component';
 import { AllhousesComponent } from './testing/allhouses/allhouses.component';
 import { DetailsComponent } from './testing/details/details.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {PasswordModule} from 'primeng/password';
-import { PersonFeedbackComponent } from './person-feedback/person-feedback.component';
 import {CarouselModule as Carousel} from 'primeng/carousel';
 import { ErrorComponent } from './Error/error/error.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { PricePipe } from './pipes/price.pipe';
-
-
 
 
 import {TableModule} from 'primeng/table';
@@ -59,18 +53,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { ProfileComponent } from './profile/profile/profile.component';
 import {OrderListModule} from 'primeng/orderlist';
-import { BookinglistComponent } from './bookinglist/bookinglist.component';
 import { CityPipe } from './pipes/city.pipe';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import {CardModule} from 'primeng/card';
-import { BookingDataComponent } from './booking-data/booking-data.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
     NavbarComponent,
     FooterComponent,
     HomeComponent,
@@ -80,21 +71,18 @@ import { BookingDataComponent } from './booking-data/booking-data.component';
     UserDetailsComponent,
     HostingComponent,
     HousesComponent,
-    BookingComponent,
     AllhousesComponent,
     DetailsComponent,
-    PersonFeedbackComponent,
     ErrorComponent,
     FilterPipe,
     PricePipe,
     ProfileComponent,
-    BookinglistComponent,
     CityPipe,
-    BookingDataComponent,
+
   ],
   imports: [
     NgxPaginationModule,MatIconModule,VirtualScrollerModule,CardModule,
-    AccordionModule,OrderListModule,
+    AccordionModule,OrderListModule,GalleriaModule,
     InputTextModule,
     ProgressBarModule,
     DropdownModule,

@@ -12,7 +12,7 @@
 </div>
 
   <div class="row  mx-auto " style="margin-bottom: 50px;">
-    <p-galleria class="col" [(value)]="itemshouse" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '1000px'}" [numVisible]="4">
+    <p-galleria class="col" [value]="itemshouse" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '1000px'}" [numVisible]="4">
       <ng-template pTemplate="item" let-item>
           <img src="http://localhost:42138/{{item?.housePhotos}}"  style="width: 1000px; height: 500px; " />
       </ng-template>
