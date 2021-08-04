@@ -33,15 +33,6 @@
                     font-family: Arial, Helvetica, sans-serif;
                   " class="page-scroll" routerLink="/Becomehost">Become a host</a>
               </li>
-              <!-- <li class="nav-item mx-4">
-                <a style="font-weight: bold;
-                font-family:Arial, Helvetica, sans-serif;" class="page-scroll text-dark" *ngIf="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Register</a>
-              </li>
-              <li class="nav-item">
-                <a style="font-weight: bold;
-                font-family:Arial, Helvetica, sans-serif;"
-                 class="page-scroll text-dark" *ngIf="login" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</a>
-              </li> -->
 
               <li class="nav-item dropdown no-arrow" style="margin-left: 30px"  >
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
@@ -55,24 +46,14 @@
                     shadow
                     animated-grow-in
                   " aria-labelledby="userDropdown">
-                  <a class="dropdown-item" routerLink="/Profile/{{ids.personId}}" >
+                  <a class="nav-item mx-4" routerLink="/Profile/{{ids.personId}}" >
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                   </a>
-                  <a class="dropdown-item" routerLink="House/detailsBooking/{{ids.personId}}">
-                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Booking
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Activity Log
-                  </a>
+         
+
                   <div class="dropdown-divider"></div>
-                  <!-- <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
-                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Logout
-                  </a> -->
-              <li class="nav-item">
+              <li class="nav-item ">
                 <a style="
                         font-weight: bold;
                         font-family: Arial, Helvetica, sans-serif;
@@ -87,11 +68,11 @@
                   Logout</a>
               </li>
 
-              <li class="nav-item mx-4">
+              <li class=" nav-item mx-4 ">
                 <a style="
                         font-weight: bold;
                         font-family: Arial, Helvetica, sans-serif;
-                      " *ngIf="login" class="page-scroll text-dark" data-bs-toggle="modal"
+                      " *ngIf="login" class="page-scroll" data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop2">
                   <i class="far fa-registered"></i>
 
@@ -101,7 +82,7 @@
                 <a style="
                         font-weight: bold;
                         font-family: Arial, Helvetica, sans-serif;
-                      " class="page-scroll text-dark" *ngIf="login" data-bs-toggle="modal"
+                      " class="page-scroll " *ngIf="login" data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop">
                   <i class="fas fa-sign-in-alt"></i>
 
