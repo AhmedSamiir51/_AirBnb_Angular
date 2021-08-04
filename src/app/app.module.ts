@@ -58,6 +58,9 @@ import {GalleriaModule} from 'primeng/galleria';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { ProfileComponent } from './profile/profile/profile.component';
+import {OrderListModule} from 'primeng/orderlist';
+import { BookinglistComponent } from './bookinglist/bookinglist.component';
+import { CityPipe } from './pipes/city.pipe';
 
 
 
@@ -83,10 +86,12 @@ import { ProfileComponent } from './profile/profile/profile.component';
     FilterPipe,
     PricePipe,
     ProfileComponent,
+    BookinglistComponent,
+    CityPipe,
   ],
   imports: [
     NgxPaginationModule,MatIconModule,
-    AccordionModule,
+    AccordionModule,OrderListModule,
     InputTextModule,
     ProgressBarModule,
     DropdownModule,

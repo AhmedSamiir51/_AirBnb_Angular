@@ -7,14 +7,22 @@
         <div class="anchors d-flex align-items-start  ">
           <div class="innerdiv">
             Filters :
-            <button (click)="toggleShow()" class="btn  border   mx-2 " style="padding: 5px 20px; border-radius: 10px;"  > city </button>
+            <button (click)="toggleShow()" class="btn  border   mx-2 " style="padding: 5px 20px; border-radius: 10px;"  > Street </button>
             <button (click)="toggleShow2()" class="btn  border   "  style="padding: 5px 20px; border-radius: 10px;" > price </button>
+            <button (click)="toggleShow3()" class="btn  border   " *ngIf="city" style="padding: 5px 20px; border-radius: 10px;" > Cityes </button>
 
             <div class="row" *ngIf="isShown" >
               <div class="col-md-6 mt-3 " >
-                <input type="text" class="form-control" [(ngModel)]="filterByCity" placeholder="Filter By Street">
+                <input type="text" class="form-control" [(ngModel)]="filterBySteert" placeholder="Filter By Street">
             </div>
           </div>
+
+          <div class="row" *ngIf="isShown3" >
+            <div class="col-md-6 mt-3 " >
+              <input type="text" class="form-control" [(ngModel)]="filterByCity" placeholder="Filter By City">
+          </div>
+        </div>
+
           <div class="row">
             <div class="col-md-6   " *ngIf="isShown2">
               <h5> Price: {{filterByPrice}}</h5>
@@ -30,7 +38,7 @@
 
       <!-- Loop to Date Of House -->
 
-      <div *ngFor="let i of this.items  |price: filterByPrice |filter: filterByCity | paginate: {
+      <div *ngFor="let i of this.items |city:filterByCity  |price: filterByPrice |filter: filterBySteert | paginate: {
         itemsPerPage: 5,
          currentPage: page,
           totalItems: TotalLength }">

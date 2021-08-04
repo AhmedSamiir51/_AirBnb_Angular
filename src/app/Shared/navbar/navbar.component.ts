@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
   }
   login = true
   LogOut = false
-  ids?:any=5000
+  ids?:any=0
 
   check(){
     var log = localStorage.getItem('token');
