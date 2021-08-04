@@ -141,7 +141,7 @@ a{
 .navbar-nav .nav-item a {
   font-size: 16px;
   font-weight: 400;
-  color: black;
+  color: #322C86;
   transition: all 0.3s ease-out 0s;
   padding: 10px 0;
   position: relative;
@@ -154,7 +154,7 @@ a{
   left: 0;
   width: 0;
   height: 3px;
-  background-color: black;
+  background-color: #322C86;
   transition: all 0.3s ease-out 0s;
 }
 
@@ -174,7 +174,7 @@ a{
   .navbar-nav .nav-item a {
     display: block;
     padding: 4px 0;
-    color: #222;
+    color: #322C86;
   }
 }
 
@@ -182,19 +182,19 @@ a{
   .navbar-nav .nav-item a {
     display: block;
     padding: 4px 0;
-    color: #222;
+    color: #322C86;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .navbar-nav .nav-item a.active, .navbar-nav .nav-item a:hover {
-    color: black;
+    color: #322C86;
   }
 }
 
 @media (max-width: 767px) {
   .navbar-nav .nav-item a.active, .navbar-nav .nav-item a:hover {
-    color: black;
+    color: #322C86;
   }
 }
 
@@ -261,12 +261,12 @@ a{
 .navbar-nav .nav-item .sub-menu li a {
   display: block;
   padding: 8px 20px;
-  color: #222;
+  color: #322C86;
 }
 
 .navbar-nav .nav-item .sub-menu li a.active, .navbar-nav .nav-item .sub-menu li a:hover {
   padding-left: 25px;
-  color: black;
+  color: #322C86;
 }
 
 .navbar-nav .sub-nav-toggler {
@@ -280,7 +280,7 @@ a{
     right: 0;
     top: 0;
     background: none;
-    color: #222;
+    color: #322C86;
     font-size: 18px;
     border: 0;
     width: 30px;
@@ -295,7 +295,7 @@ a{
     right: 0;
     top: 0;
     background: none;
-    color: #222;
+    color: #322C86;
     font-size: 18px;
     border: 0;
     width: 30px;
@@ -306,27 +306,27 @@ a{
 .navbar-nav .sub-nav-toggler span {
   width: 8px;
   height: 8px;
-  border-left: 1px solid #222;
-  border-bottom: 1px solid #222;
+  border-left: 1px solid #322C86;
+  border-bottom: 1px solid #322C86;
   transform: rotate(-45deg);
   position: relative;
   top: -5px;
 }
 
 .sticky .navbar-toggler .toggler-icon {
-  background-color: #222;
+  background-color: #322C86;
 }
 
 .sticky .navbar-nav .nav-item a {
-  color: #222;
+  color: #322C86;
 }
 
 .sticky .navbar-nav .nav-item a::before {
-  background-color: black;
+  background-color: #322C86;
 }
 
 .sticky .navbar-nav .nav-item a.active, .sticky .navbar-nav .nav-item a:hover {
-  color: black;
+  color: #322C86;
 }
 
 /*===== hero =====*/
@@ -402,11 +402,6 @@ a{
     font-size: 40px;
     line-height: 60px;
   }
-}
-
-.hero_content .hero_title span {
-  display: contents;
-  color: rgb(255, 56, 92);
 }
 
 .hero_content p {
