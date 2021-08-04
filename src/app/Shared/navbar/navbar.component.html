@@ -31,7 +31,7 @@
                 <a style="
                     font-weight: bold;
                     font-family: Arial, Helvetica, sans-serif;
-                  " class="page-scroll text-dark" routerLink="/Becomehost">Become a host</a>
+                  " class="page-scroll" routerLink="/Becomehost">Become a host</a>
               </li>
               <!-- <li class="nav-item mx-4">
                 <a style="font-weight: bold;
@@ -46,14 +46,14 @@
               <li class="nav-item dropdown no-arrow" style="margin-left: 30px"  >
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
-                  <span class="ml-2 d-none d-lg-inline text-black-50 small">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  <span style="font-weight: 500;" class="ml-2 d-none d-lg-inline text-black">
+                    <i class="fas fa-user fa-sm fa-fw mr-2"></i>
                     {{ ids?.personFirstName }}</span>
                 </a>
                 <div class="
                     dropdown-menu dropdown-menu-right
                     shadow
-                    animated--grow-in
+                    animated-grow-in
                   " aria-labelledby="userDropdown">
                   <a class="dropdown-item" routerLink="/Profile/{{ids.personId}}" >
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
