@@ -15,7 +15,7 @@ export class ExplorenerbyComponent implements OnInit {
   Madinaty="Madinaty"
   SheikhZayedCity="Sheikh Zayed City"
   MarsaMartruh="Marsa Martruh"
-  PyramidsGardens="Pyramids Gardens"
+  other="All Cities"
   ngOnInit(): void {
   }
 

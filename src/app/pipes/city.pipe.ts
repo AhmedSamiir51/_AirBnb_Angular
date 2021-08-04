@@ -1,10 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { pipe } from 'rxjs';
 
 @Pipe({
-  name: 'filter'
+  name: 'city'
 })
-export class FilterPipe implements PipeTransform {
+export class CityPipe implements PipeTransform {
 
   transform(value: any,filterCity:string ) {
 
@@ -18,7 +17,7 @@ export class FilterPipe implements PipeTransform {
     var city=[]
     for(var cities of value){
 
-      if (cities['houseStreet'].toLowerCase().match(filterCity.toLowerCase())) {
+      if (cities['houseCity'].toLowerCase().match(filterCity.toLowerCase())) {
 
          city.push(cities);
       }
@@ -29,6 +28,5 @@ export class FilterPipe implements PipeTransform {
 
 
   }
-
 
 }

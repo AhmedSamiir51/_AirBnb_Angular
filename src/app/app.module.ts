@@ -55,6 +55,12 @@ import {DropdownModule} from 'primeng/dropdown';
 import {ProgressBarModule} from 'primeng/progressbar';
 import {InputTextModule} from 'primeng/inputtext';
 import {GalleriaModule} from 'primeng/galleria';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { ProfileComponent } from './profile/profile/profile.component';
+import {OrderListModule} from 'primeng/orderlist';
+import { BookinglistComponent } from './bookinglist/bookinglist.component';
+import { CityPipe } from './pipes/city.pipe';
 
 
 
@@ -79,12 +85,27 @@ import {GalleriaModule} from 'primeng/galleria';
     ErrorComponent,
     FilterPipe,
     PricePipe,
+    ProfileComponent,
+    BookinglistComponent,
+    CityPipe,
   ],
   imports: [
-    NgxPaginationModule,AccordionModule,InputTextModule,ProgressBarModule,DropdownModule,DialogModule,ContextMenuModule,MultiSelectModule,SliderModule,ToastModule,TableModule,
+    NgxPaginationModule,MatIconModule,
+    AccordionModule,OrderListModule,
+    InputTextModule,
+    ProgressBarModule,
+    DropdownModule,
+    DialogModule,
+    ContextMenuModule,
+    MultiSelectModule,
+    SliderModule,
+    ToastModule,
+    TableModule,
     BrowserModule,
-    AppRoutingModule,GalleriaModule,
+    AppRoutingModule,
+    GalleriaModule,
     NgbModule,
+    MatButtonModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
