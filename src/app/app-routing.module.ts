@@ -1,3 +1,4 @@
+import { ProfileComponent } from './profile/profile/profile.component';
 import { ErrorComponent } from './Error/error/error.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { DetailsComponent } from './testing/details/details.component';
@@ -23,7 +24,10 @@ const routes: Routes = [
   {path:"Booking",component:BookingComponent},
   {path:"House/AllHouses/:City",component:AllhousesComponent},
   {path:"House/HousesBooking/:id",component:DetailsComponent},
+  {path:"House/AllHouses",component:AllhousesComponent},
   {path:"Feedback",component:PersonFeedbackComponent},
+  {path:"Profile/:id",component:ProfileComponent},
+
   {path:"",redirectTo:"home",pathMatch:"full"},
 
   {path:'**',component:ErrorComponent},

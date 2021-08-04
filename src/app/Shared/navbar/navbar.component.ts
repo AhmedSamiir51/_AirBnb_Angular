@@ -34,32 +34,40 @@ export class NavbarComponent implements OnInit {
   }
   login = true
   LogOut = false
+  ids?:any=0
+
+  check(){
+    var log = localStorage.getItem('token');
+    if (log != null) {
+      this.login = false
+      this.LogOut = true
+     this.serves.getUserProfile().subscribe(e=>{this.ids=e;console.log(e)},er=>console.log(er));
+
+    } else {
+      this.login = true
+      this.LogOut = false
+      this.serves.getUserProfile().subscribe(e=>{this.ids=e;console.log(e)},er=>console.log(er));
+
+
+    }
+  }
+
 
   ngOnInit(): void {
 
+    this.check();
 
     if (localStorage.getItem('token') != null){
       this.router.navigateByUrl('/home');
     }
     this.router.resetConfig
-    this.check()
   }
 
 
 
 
 
-  check(){
-    var ahmed = localStorage.getItem('token');
-    if (ahmed != null) {
-      this.login = false
-      this.LogOut = true
-    } else {
-      this.login = true
-      this.LogOut = false
 
-    }
-  }
 
 
   //
@@ -113,6 +121,8 @@ export class NavbarComponent implements OnInit {
 
   //LogOut
   logout() {
+    this.router.navigateByUrl('/home');
+
     localStorage.removeItem('token');
     window.location.reload();
     this.check()

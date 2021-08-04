@@ -17,23 +17,34 @@ export class AllhousesComponent implements OnInit {
   constructor(public service :HouseService , private router: Router,public services :UserService,public ar:ActivatedRoute ,public serviceimg:HousePhotoService) { }
 
   options: any;
-  TotalLength:any;
-  page:number=1;
+  filterBySteert:string=''
   filterByCity:string=''
+  TotalLength:any;
+  page:any = 1;
   overlays: any[]=[];
   items:any=[]
   itemshouse:any=[]
   id=0
-  filterByPrice:any=1000
+  filterByPrice:any=300
+  isShown = false
+  isShown2 = false
+  isShown3 = false
+
+
+
+  toggleShow() {
+    this.isShown = ! this.isShown;
+  }
+  toggleShow2() {
+    this.isShown2 = ! this.isShown2;
+  }
+
+
+  toggleShow3() {
+    this.isShown3 = ! this.isShown3;
+  }
   ngOnInit(): void {
-
-
-    this.fetchPosts();
-     
-
-
-
-
+    this.fetchPosts()
     this.options = {
         center: {lat: 36.890257, lng: 30.707417},
         zoom: 12
@@ -53,13 +64,23 @@ export class AllhousesComponent implements OnInit {
   }
 
 
-
+city=false
   fetchPosts(): void {
 
-    this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{this.items=e; this.TotalLength=e.length;},er=>console.log(er))
-    this.serviceimg.GetAllHousesPhoto().subscribe(e=>{this.itemshouse=e;console.log(e)})
+    if (this.ar.snapshot.params["City"]=="All Cities") {
+      this.service.GetAllHouses().subscribe(e=>{this.items=e; this.TotalLength=e.length;console.log(e)},er=>console.log(er))
+      this.city=true
+    }
+    else{
+      this.city=false
+
+      this.service.getHousesByCity(this.ar.snapshot.params["City"]).subscribe(e=>{this.items=e; this.TotalLength=e.length;console.log(e)},er=>console.log(er))
+    }
+    this.serviceimg.GetAllHousesPhoto().subscribe(e=>{this.itemshouse=e;})
+
 
   }
+
 
   onTableDataChange(event:any){
     this.page = event;

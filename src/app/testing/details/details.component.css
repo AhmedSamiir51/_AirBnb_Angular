@@ -20,11 +20,11 @@
   .inner-star > p {
     margin-bottom: 0;
   }
-  
+
   hr {
     font-weight: 700;
   }
-  
+
   .mycol {
     text-align: left;
   }
@@ -41,7 +41,7 @@
     position: sticky;
     top: 100px;
   }
-  
+
   .check-container {
     border: 1px solid gray;
     border-radius: 10px;
@@ -55,14 +55,16 @@
     margin: 0;
   }
   .guests {
-    padding-left: 8px;
-    text-align: left;
+
     font-weight: bold;
     border-top: 1px solid black;
   }
+  :host ::ng-deep .p-galleria  {
+    margin: auto;
+  }
+
   .mybtn {
     background-color: #e41b52;
     color: #fff;
     font-weight: bold;
   }
-  

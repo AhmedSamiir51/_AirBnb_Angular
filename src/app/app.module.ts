@@ -14,6 +14,7 @@ import { CompareValidatorModule } from 'angular-compare-validator';
 
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Auth/login/login.component';
@@ -21,6 +22,7 @@ import { RegisterComponent } from './Auth/register/register.component';
 import { NavbarComponent } from './Shared/navbar/navbar.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { HomeComponent } from './page/home/home.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { ExplorenerbyComponent } from './page/explorenerby/explorenerby.component';
 import { LiveAnyWhereComponent } from './page/live-any-where/live-any-where.component';
 import { DiscoverThingsComponent } from './page/discover-things/discover-things.component';
@@ -39,12 +41,6 @@ import {CarouselModule as Carousel} from 'primeng/carousel';
 import { ErrorComponent } from './Error/error/error.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { PricePipe } from './pipes/price.pipe';
-
-
-
-import { NgxPaginationModule } from 'ngx-pagination';
-
-
 import {TableModule} from 'primeng/table';
 import {ToastModule} from 'primeng/toast';
 import {SliderModule} from 'primeng/slider';
@@ -55,6 +51,13 @@ import {DropdownModule} from 'primeng/dropdown';
 import {ProgressBarModule} from 'primeng/progressbar';
 import {InputTextModule} from 'primeng/inputtext';
 
+import {GalleriaModule} from 'primeng/galleria';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { ProfileComponent } from './profile/profile/profile.component';
+import {OrderListModule} from 'primeng/orderlist';
+import { BookinglistComponent } from './bookinglist/bookinglist.component';
+import { CityPipe } from './pipes/city.pipe';
 
 
 
@@ -79,13 +82,32 @@ import {InputTextModule} from 'primeng/inputtext';
     ErrorComponent,
     FilterPipe,
     PricePipe,
+    ProfileComponent,
+    BookinglistComponent,
+    CityPipe,
   ],
   imports: [
+
     NgxPaginationModule,
     AccordionModule,InputTextModule,ProgressBarModule,DropdownModule,DialogModule,ContextMenuModule,MultiSelectModule,SliderModule,ToastModule,TableModule,
+
+    NgxPaginationModule,MatIconModule,
+    AccordionModule,OrderListModule,
+    InputTextModule,
+    ProgressBarModule,
+    DropdownModule,
+    DialogModule,
+    ContextMenuModule,
+    MultiSelectModule,
+    SliderModule,
+    ToastModule,
+    TableModule,
+
     BrowserModule,
     AppRoutingModule,
+    GalleriaModule,
     NgbModule,
+    MatButtonModule,
     HttpClientModule,
     FormsModule,
    
