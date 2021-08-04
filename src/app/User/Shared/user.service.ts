@@ -17,6 +17,13 @@ export class UserService {
   getalluser(){
     return this.http.get<User[]>(this.baseUrl+"/People/People")
   }
+
+  getalluserById(id:number){
+    return this.http.get<User>("http://localhost:42138/api/People/"+id)
+  }
+
+
+
   register(formModel: any  ) {
     return this.http.post<any>(this.baseUrl + "/People" ,formModel,{withCredentials:true});
   }

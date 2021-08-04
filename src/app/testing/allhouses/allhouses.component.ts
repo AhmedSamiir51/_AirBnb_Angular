@@ -25,9 +25,17 @@ export class AllhousesComponent implements OnInit {
   itemshouse:any=[]
   id=0
   filterByPrice:any=300
+  isShown = false
+  isShown2 = false
 
 
 
+  toggleShow() {
+    this.isShown = ! this.isShown;
+  }
+  toggleShow2() {
+    this.isShown2 = ! this.isShown2;
+  }
   ngOnInit(): void {
     this.fetchPosts()
     this.options = {

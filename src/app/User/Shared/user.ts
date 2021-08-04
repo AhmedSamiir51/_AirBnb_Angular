@@ -6,7 +6,7 @@ import { FileUpload, FileUploadModule } from 'primeng/fileupload';
 export class User {
 
   constructor(public PersonFirstName?:string ,public PersonEmailName?:string ,public PersonLastName?:string ,public PersonPassword?:string,public PersonPhone?:number,
-    public ProfilePicture?:File ){}
+    public ProfilePicture?:File , public ProfilePictureName?:string  ){}
 
 }
 

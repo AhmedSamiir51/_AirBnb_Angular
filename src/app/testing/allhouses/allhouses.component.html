@@ -6,18 +6,26 @@
         <h2 class="h-text">Stays in {{ar.snapshot.params["City"]}} </h2>
         <div class="anchors d-flex align-items-start  ">
           <div class="innerdiv">
-            <div class="row">
-              <div class="col-md-12">
+            Filters :
+            <button (click)="toggleShow()" class="btn  border   mx-2 " style="padding: 5px 20px; border-radius: 10px;"  > city </button>
+            <button (click)="toggleShow2()" class="btn  border   "  style="padding: 5px 20px; border-radius: 10px;" > price </button>
+
+            <div class="row" *ngIf="isShown" >
+              <div class="col-md-6 mt-3 " >
                 <input type="text" class="form-control" [(ngModel)]="filterByCity" placeholder="Filter By Street">
-              </div>
-              <div class="col-md-6">
-                <h5> Price: {{filterByPrice}}</h5>
-                <p-slider [min]="0" [max]="200" [(ngModel)]="filterByPrice"></p-slider>
-              </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-6   " *ngIf="isShown2">
+              <h5> Price: {{filterByPrice}}</h5>
+              <p-slider [min]="0" [max]="200" [(ngModel)]="filterByPrice"></p-slider>
+            </div>
+          </div>
+
+
+          </div>
         </div>
-        <p class="p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Learn more</a> </p>
+        <p class="p-text">Review COVID-19 travel restrictions before you book </p>
       </div>
 
       <!-- Loop to Date Of House -->
@@ -44,11 +52,9 @@
                   <p class="p-card-1">Meditation class in cairo</p>
                 </div>
                 <div class="heart">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                  </svg>
+                  <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                    <mat-icon >favorite</mat-icon>
+                  </button>
                 </div>
               </div>
               <a routerLink="/House/HousesBooking/{{i.houseId}}">
