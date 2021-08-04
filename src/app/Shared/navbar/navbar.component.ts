@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, NgForm, Validators,AbstractControl
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/User/Shared/user.service';
+import { BookingService } from 'src/app/service/Booking/booking.service';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  constructor(private router: Router, public serves: UserService, private toastr: ToastrService  ,private fb: FormBuilder) { }
+  constructor(public servics:BookingService,private router: Router, public serves: UserService, private toastr: ToastrService  ,private fb: FormBuilder) { }
   formModels = {
     Email: '',
     Password: ''
@@ -42,6 +43,7 @@ export class NavbarComponent implements OnInit {
       this.login = false
       this.LogOut = true
      this.serves.getUserProfile().subscribe(e=>{this.ids=e;console.log(e)},er=>console.log(er));
+     
 
     } else {
       this.login = true

@@ -1,5 +1,5 @@
-<div class="body mt-5">
-  <div class="container emp-profile ">
+<div class="body">
+  <div class="container emp-profile">
     <form method="post mt-5 ">
       <div class="row">
         <div class="col-md-4">
@@ -8,17 +8,11 @@
               src="http://localhost:42138/{{user.profilePictureName}}"
               alt=""
             />
-            <div class="file btn btn-lg btn-primary">
-              Change Photo
-              <input type="file" name="file" />
-            </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="profile-head">
             <h6>{{user.personFirstName}} {{user.personLastName}} </h6>
-
-
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item">
                 <a
@@ -66,8 +60,6 @@
                   <p>{{user.personPhone}}</p>
                 </div>
               </div>
-
-
             </div>
             <div
               class="tab-pane fade"
@@ -131,6 +123,7 @@
             name="btnAddMore"
             value="Edit Profile"
           />
+          <button class="btn btn-primary" (click)="btn()" data-bs-toggle="modal" data-bs-target="#exampleModal"  type="button">Houses</button>
         </div>
       </div>
       <div class="row">
@@ -144,3 +137,36 @@
     </form>
   </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Booking History</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" *ngFor="let i of houses">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="http://localhost:42138/{{i.housePhotoName}}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{i.title}}</h5>
+                <p class="card-text"><small class="text-muted">${{i.housePrice}}</small>/night</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+

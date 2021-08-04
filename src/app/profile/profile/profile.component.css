@@ -3,6 +3,7 @@
   background: -webkit-linear-gradient(left, #3931af, #00c6ff);
   height: 100vh;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+  padding: 200px;
 }
 .emp-profile{
   padding: 3%;
