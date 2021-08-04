@@ -1,3 +1,4 @@
+import { BookingDataComponent } from './booking-data/booking-data.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { ErrorComponent } from './Error/error/error.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:"House/AllHouses/:City",component:AllhousesComponent},
   {path:"House/HousesBooking/:id",component:DetailsComponent},
   {path:"House/AllHouses",component:AllhousesComponent},
+  {path:"House/detailsBooking/:id",component:BookingDataComponent},
   {path:"Feedback",component:PersonFeedbackComponent},
   {path:"Profile/:id",component:ProfileComponent},
 
