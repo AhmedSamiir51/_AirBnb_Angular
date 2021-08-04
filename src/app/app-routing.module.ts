@@ -10,7 +10,7 @@ import { LoginComponent } from './Auth/login/login.component';
 import { RegisterComponent } from './Auth/register/register.component';
 import { HomeComponent } from './page/home/home.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { AuthGuard } from './Auth/auth/auth.guard';
 import { HousesComponent } from './testing/houses/houses/houses.component';
 import { PersonFeedbackComponent } from './person-feedback/person-feedback.component';
@@ -39,6 +39,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes),CarouselModule],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
