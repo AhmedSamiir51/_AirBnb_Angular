@@ -61,7 +61,9 @@ import { ProfileComponent } from './profile/profile/profile.component';
 import {OrderListModule} from 'primeng/orderlist';
 import { BookinglistComponent } from './bookinglist/bookinglist.component';
 import { CityPipe } from './pipes/city.pipe';
-
+import {VirtualScrollerModule} from 'primeng/virtualscroller';
+import {CardModule} from 'primeng/card';
+import { BookingDataComponent } from './booking-data/booking-data.component';
 
 
 @NgModule({
@@ -88,9 +90,10 @@ import { CityPipe } from './pipes/city.pipe';
     ProfileComponent,
     BookinglistComponent,
     CityPipe,
+    BookingDataComponent,
   ],
   imports: [
-    NgxPaginationModule,MatIconModule,
+    NgxPaginationModule,MatIconModule,VirtualScrollerModule,CardModule,
     AccordionModule,OrderListModule,
     InputTextModule,
     ProgressBarModule,
