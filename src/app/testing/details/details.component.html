@@ -1,56 +1,42 @@
 
 <div class="container" id="c11">
-  <h1>{{Houses.title}}</h1>
+  <h1>{{Houses?.title}}</h1>
   <div class="star-review mb-3 d-flex">
     <div class="inner-star d-flex">
         <i class="fas fa-star"></i>
         <p>4.33 &nbsp; </p>
         <p class="star-p"> (3 reviews)</p>
         <p> &nbsp; . &nbsp; </p>
-        <p class="star-p">{{Houses.houseStreet}}, {{Houses.houseCity}}, {{Houses.houseCountry}}</p>
+        <p class="star-p">{{Houses?.houseStreet}}, {{Houses?.houseCity}}, {{Houses?.houseCountry}}</p>
     </div>
 </div>
-  <div class="row">
-      <div class="col-6">
-          <img src="http://localhost:42138/{{itemshouse[0]?.housePhotos}}" class="img-fluid rounded float-left mr-1 ">
-      </div>
-      <div class="col-6">
 
-
-              <div class="row">
-                  <div class="col-6 ">
-                      <img src="http://localhost:42138/{{itemshouse[1]?.housePhotos}}"
-                          class=" mb-2 rounded float-left">
-                      <img  src="http://localhost:42138/{{itemshouse[2]?.housePhotos}}"
-                          class=" rounded float-left ">
-                  </div>
-
-
-                  <div class="col-6 ">
-                      <img src="http://localhost:42138/{{itemshouse[3]?.housePhotos}}"
-                          class=" mb-2 rounded float-left">
-                      <img src="http://localhost:42138/{{itemshouse[4]?.housePhotos}}"
-                          class=" rounded float-left  ">
-                  </div>
-
-              </div>
-
-      </div>
+  <div class="row  mx-auto " style="margin-bottom: 50px;">
+    <p-galleria class="col" [value]="itemshouse" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '1000px'}" [numVisible]="4">
+      <ng-template pTemplate="item" let-item>
+          <img src="http://localhost:42138/{{item?.housePhotos}}"  style="width: 1000px; height: 500px; " />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+          <div class="p-grid p-nogutter p-justify-center mx-4">
+              <img src="http://localhost:42138/{{item?.housePhotos}}"  style="width: auto; height: 100px; "   />
+          </div>
+      </ng-template>
+    </p-galleria>
   </div>
+
   <div class="row ">
       <div class="col-8 ">
-          <div class=" row mt-5 d-flex justify-content-between  ">
+          <div class=" row mt-3 d-flex justify-content-between  ">
               <div class="col ">
                   <h1>
-                      Entire chalet hosted by {{ids.personFirstName}}
+                      Entire chalet hosted by {{ids?.personFirstName}}
                   </h1>
                   <h3>
                       7 guests · 2 bedrooms · 3 beds · 2 baths
                   </h3>
               </div>
               <div class="col ">
-                  <img src="../../../assets/images/38b2fa73-2b79-46a7-8811-c3b2170172e8.jpg" class="rounded" length="60"
-                      width="60">
+
               </div>
               <hr>
           </div>
@@ -58,7 +44,7 @@
 
               <div>
                   <h5>
-                    {{ids.personFirstName}} is a Superhost
+                    {{ids?.personFirstName}} is a Superhost
                   </h5>
                   <p>
                       Superhosts are experienced, highly rated hosts who are committed to providing great stays
@@ -88,16 +74,11 @@
 
               <div>
                   <h3>
-                      All about {{ids.personFirstName}}’s place
+                      All about {{ids?.personFirstName}}’s place
                   </h3>
 
                   <p>
-                      A lovely chalet situated within Golden Beach 2 in Ras Sedr. The compound has communal
-                      swimming pools, entertainments and aqua park for kids; all on a walking distance from
-                      stunning beachfront. The latter is one of the top ones in the area. Has private security,
-                      all essential services are available within, full of gardens and common social spaces, yet
-                      most importantly has a lovely beach. The chalet is an ideal getaway for mind-clearing,
-                      family gathering, or simply to enjoy the sun and the beach.
+                      {{Houses?.houseDescription}}
                   </p>
               </div>
 
@@ -166,18 +147,20 @@
                 <p> {{Houses?.housePrice}} / night</p>
                 <p>4.33(3 reviews)</p>
             </div>
-            <div class=" check-container ">
+            <div class=" check-container  ">
                 <div class="row-cols-2 row">
                 <div class="col mycol mycol-l">
                     <p class="check">CHECK-IN</p>
-                    <p class="check-l">  <input  [(ngModel)]="st" type="date"> </p>
+                    <p class="check-l">  <input class="form-control" [(ngModel)]="st" type="date"> </p>
                     </div>
                 <div class="col mycol mycol-r">
                     <p class="check">CHECKOUT</p>
-                    <p class="check-l">  <input  [(ngModel)]="ed" class="check-l" type="date" ></p>
+                    <p class="check-l">  <input class="form-control" [(ngModel)]="ed"  type="date" ></p>
                     </div>
-                <div class="col-12 text-center">
-                    <p class="guests">GUESTS</p>
+                <div class="col-12 text-center ">
+                    <p class="guests my-auto"> <i class="fas fa-dollar-sign  " style="font-size: 17px; color: black !important;"></i>
+                      CASH ON CHECK IN
+                     </p>
                 </div>
                 </div>
             </div>

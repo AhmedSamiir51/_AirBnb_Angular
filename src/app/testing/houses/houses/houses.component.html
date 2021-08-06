@@ -1,10 +1,10 @@
 <div class="container mt-5 pt-5 mb-5">
   <div class="row justify-content-center">
-     <div class="col-md-6 col-lg-4 col-xl-4">
-        <div class="card">
-            <div class="card-body">
+     <div>
+        <div >
+            <div >
                 <div class="text-center m-auto">
-                   <h4 class="text-uppercase text-center">CREATE ACCOUNT</h4>
+                   <h2 class="text-uppercase text-center">CREATE ACCOUNT</h2>
                 </div>
                 <form [formGroup]="formModeule" autocomplete="off" (ngSubmit)="Save()" enctype="multipart/form-data" >
 
@@ -25,6 +25,11 @@
                     <input type="text"  placeholder="HouseCountry" formControlName="Country" class="form-control" >
                   </div>
                   <div class="form-group mb-3">
+                    <label for="HouseDescription">House Description </label>
+                    <textarea name="HouseDescription" formControlName="HouseDescription"  class="form-control"   cols="30" rows="10"></textarea>
+                    <!-- <input type="text"  placeholder="HouseDescription" formControlName="HouseDescription" class="form-control" > -->
+                  </div>
+                  <div class="form-group mb-3">
                       <label for="fname"> HouseNumber </label>
                       <input type="text"  placeholder="HouseNumber" formControlName="number" class="form-control" >
                   </div>
@@ -36,11 +41,11 @@
 
                   <div class="form-group mb-3">
                     <label for="fname"> images </label>
-                    <input type="file" #img placeholder="HousePrice"  accept="image/png, image/jpg, image/jpeg"  formControlName="HousePhotoFiles" (change)="onFileChange($event)" multiple  minlength="5" maxlength="5" required >
+                    <input class="form-control" type="file" #img placeholder="HousePrice"  accept="image/png, image/jpg, image/jpeg"  formControlName="HousePhotoFiles" (change)="onFileChange($event)" multiple  minlength="5" maxlength="5" required >
                   </div>
 
-                  <div class="form-group mb-0 d-flex justify-content-between">
-                      <button class="btn btn-dark btn-block" type="submit"   > Add </button>
+                  <div class="form-group mt-5 mb-5 d-flex justify-content-between">
+                      <button class="btn btn-dark btn-block col-3 mx-auto" type="submit"   > Add </button>
                   </div>
                 </form>
              </div>

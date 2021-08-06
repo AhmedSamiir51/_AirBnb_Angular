@@ -4,12 +4,13 @@ import { FormBuilder, FormControl, FormGroup, NgForm, Validators,AbstractControl
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/User/Shared/user.service';
+import { BookingService } from 'src/app/service/Booking/booking.service';
 
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
 
@@ -27,39 +28,48 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  constructor(private router: Router, public serves: UserService, private toastr: ToastrService  ,private fb: FormBuilder) { }
+  constructor(public servics:BookingService,private router: Router, public serves: UserService, private toastr: ToastrService  ,private fb: FormBuilder) { }
   formModels = {
     Email: '',
     Password: ''
   }
   login = true
   LogOut = false
+  ids?:any=0
+
+  check(){
+    var log = localStorage.getItem('token');
+    if (log != null) {
+      this.login = false
+      this.LogOut = true
+     this.serves.getUserProfile().subscribe(e=>{this.ids=e;console.log(e)},er=>console.log(er));
+     
+
+    } else {
+      this.login = true
+      this.LogOut = false
+      this.serves.getUserProfile().subscribe(e=>{this.ids=e;console.log(e)},er=>console.log(er));
+
+
+    }
+  }
+
 
   ngOnInit(): void {
 
+    this.check();
 
     if (localStorage.getItem('token') != null){
       this.router.navigateByUrl('/home');
     }
     this.router.resetConfig
-    this.check()
   }
 
 
 
 
 
-  check(){
-    var ahmed = localStorage.getItem('token');
-    if (ahmed != null) {
-      this.login = false
-      this.LogOut = true
-    } else {
-      this.login = true
-      this.LogOut = false
 
-    }
-  }
 
 
   //
@@ -98,7 +108,7 @@ export class NavbarComponent implements OnInit {
         this.toastr.success("welcome")
 
         window.location.reload();
-        
+
         localStorage.setItem('token', res.token);
       },
       err => {
@@ -113,6 +123,8 @@ export class NavbarComponent implements OnInit {
 
   //LogOut
   logout() {
+    this.router.navigateByUrl('/home');
+
     localStorage.removeItem('token');
     window.location.reload();
     this.check()

@@ -27,7 +27,20 @@ export class DetailsComponent implements OnInit {
   }
 
   booking:Booking=new Booking()
-
+  responsiveOptions:any[] = [
+    {
+        breakpoint: '1024px',
+        numVisible: 5
+    },
+    {
+        breakpoint: '768px',
+        numVisible: 3
+    },
+    {
+        breakpoint: '560px',
+        numVisible: 1
+    }
+];
   st?:Date
   ed?:Date
   myDate =new Date();

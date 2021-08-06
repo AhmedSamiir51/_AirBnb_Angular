@@ -17,7 +17,9 @@ export class BookingService {
   GetAllBooking(){
     return this.http.get<Booking[]>(this.baseurl+"/Bookings")
   }
-
+  GetAllBookingToUser(id:number){
+    return this.http.get<Booking[]>(this.baseurl+"/Bookings/person/"+id)
+  }
 
   addBooking(body:any){
 

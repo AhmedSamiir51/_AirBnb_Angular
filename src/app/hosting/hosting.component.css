@@ -81,3 +81,31 @@
   background-color: white;
 }
 
+._1uobmjtt {
+  cursor: pointer !important;
+  text-decoration: none !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 450 !important;
+  border-radius: 8px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  border: none !important;
+  background: -webkit-linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
+  background: -moz-linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
+  background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
+  color: #FFFFFF !important;
+  width: 25% !important;
+}
+._163rr5i {
+  -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
+  border-radius: 8px !important;
+}
+._19di23v {
+  background-image: -webkit-radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% ) !important;
+  background-image: -moz-radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% ) !important;
+  background-image: radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% ) !important;
+}
+
+
+

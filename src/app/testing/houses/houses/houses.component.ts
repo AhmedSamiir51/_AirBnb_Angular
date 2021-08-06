@@ -19,6 +19,7 @@ export class HousesComponent implements OnInit {
     number:[''],
     Price:[''],
     Title:[''],
+    HouseDescription:[''],
     HousePhotoFiles:['',[Validators.minLength(5),Validators.maxLength(5)]],
     PersonId:['']
   })
@@ -70,6 +71,7 @@ export class HousesComponent implements OnInit {
     this.formData.append('HousePrice', this.formModeule.controls.Price.value);
     this.formData.append('Title', this.formModeule.controls.Title.value);
     this.formData.append('PersonId', this.id.personId );
+    this.formData.append('HouseDescription', this.formModeule.controls.HouseDescription.value );
 
 
 
